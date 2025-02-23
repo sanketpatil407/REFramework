@@ -1,0 +1,172 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Initialize_Applications" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>396,292</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Initialization_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Management.Automation</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Reflection</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Management.Automation</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="1551,1504" sap2010:WorkflowViewState.IdRef="Sequence_9">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="UserName" />
+      <Variable x:TypeArguments="ss:SecureString" Name="Password" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="450,157" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Opening applications...&quot;]" />
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="[in_Config(&quot;UiDemoCredentials&quot;).ToString]" CacheStrategy="None" DisplayName="Get Credential" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="450,185" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[Password]" Username="[UserName]" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: UiDemo" sap:VirtualizedContainerService.HintSize="450,1106" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Always" ScopeGuid="6251413e-404b-47b5-afa6-31a622223cb0" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,774" sap2010:WorkflowViewState.IdRef="Sequence_10">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Username'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382,262" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="6251413e-404b-47b5-afa6-31a622223cb0" Text="[UserName]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="111, 92, 120, 23" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'editable text user'" FullSelectorArgument="&lt;ctrl automationid='user' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='user' role='editable text' /&gt;" Guid="07f6c24b-f323-4b42-8c96-0fcabfe7a726" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHwAAAAbCAYAAAC+7+tcAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABnSURBVGhD7dG5DYBAEATByz8VhEWA4GHwJLBdJY0zbq+TlPU8mO0Ovu2HDd5ncGYSPEbwGMFjBI8RPEbwGMFjBI8RPEbwGMFjBI8RPEbwGMFjBI8RPEbwGMFjBI/5DW5z9wpOg+AxFwJkFBpNwiKqAAAAAElFTkSuQmCC" InformativeScreenshot="960eae9f0a5269bb796caa9421580293.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='uidemo.exe' cls='HwndWrapper*' title='UiDemo' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="24, 89, 81, 31" ElementType="Text" FriendlyName="'Username'" FullSelectorArgument="&lt;ctrl name='Username' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Username' role='text' automationid='' check:text='Username' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFUAAAAjCAYAAADljkaGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG2SURBVGhD7ZbrsYQgDEYpy5roh2YoxWa4AxLNA59Lft3vzDg7CxiSA6KhgOkE3QB+B1IdgFQHINUBSHUAUh2AVAcg1QFIdQBSHYBUByDVgVupOYYSYtbNjau+/wykOgCpDsyVuqayhFACXUsqqx6/9y8lsc41LW18rr+1v8XNJYZQYl5LWti9Op/Lebd7l5RFjC3EFl+2cdS8IRYzZMBEqSSAeteS4lGciZOjENukhlq8WIZeNFuALlCG4sV2EfsAEmPnsm02Ds/HjhkzT2orVu6+ndank5FJjxPepErR1zlVaNf3yEbOOK7aFHXR1ZNmxpwwTyr9Hz2ebVfyx+i4hNSHReh597bhEXAuVYaQbcdutpfORzNV6gY7h6hvuOqSz1LpPGWDnu7UW6l64ofcSh0/lpVRYoy2O/t9V0dD56vU0X0zpIr8X3IrdX9ZqMpaYbyYNZXIExdJ9d1rvgaOpEdyTKHUyneqLp527q9Sh3XLl+8ZD6RW9KeFnowVs196lW0M82b9IpX+U1z6LPtZ6tH25jytPJQK3gCpDkCqA5DqAKQ6AKkOQKoDkOoApDoAqQ5AqgN/9GIQAvKYPP0AAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382,262" sap2010:WorkflowViewState.IdRef="NTypeInto_2" IsPassword="True" ScopeIdentifier="6251413e-404b-47b5-afa6-31a622223cb0" SecureText="[Password]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="111, 135, 120, 23" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FriendlyName="'editable text pass'" FullSelectorArgument="&lt;ctrl automationid='pass' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='pass' role='editable text' /&gt;" Guid="ac3f07ea-4efb-475a-b1c6-f761e61edfd9" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHwAAAAbCAYAAAC+7+tcAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABnSURBVGhD7dE5EYBQFATBrxxVqMIEZAQcBt50V22y6ayTlPU8mO0Ovu2HDd5ncGYSPEbwGMFjBI8RPEbwGMFjBI8RPEbwGMFjBI8RPEbwGMFjBI8RPEbwGMFjBI/5DW5z9wpOg+AxF4guJtQ+vU+9AAAAAElFTkSuQmCC" InformativeScreenshot="fd5683945d50b37d1823907bcdcb429a.png" ScopeSelectorArgument="&lt;wnd app='uidemo.exe' cls='HwndWrapper*' title='UiDemo' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="24, 132, 76, 31" ElementType="Text" FriendlyName="'Password'" FullSelectorArgument="&lt;ctrl name='Password' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Password' role='text' automationid='' check:text='Password' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFAAAAAjCAYAAAADp43CAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHZSURBVGhD7ZbZccQgDEApi5rUD81QiptRxhiDLmzH2nxsRm8mHxGXeAK8CQMXSQaC3xECnYRAJyHQSQh0EgKdhEAnIdBJCHQSAp2EQCchcMFWMqZccJMNgluBbaKU+N+Dib+dzwpkE21Y8v+XqPdt80JgC2JOGcvd7F+MuW+DdwKxIqSEUPt/wK/4GR+9l+39NI+2oyjWmm0O4ybQteQ6WVS4tUMd/Wa7yCMXrEYOFu8E0hO4FQSaaIUh4ugqxlfg4omBrcCYk5/wo2B0Xt7Helb6GDL/KY4XuI/llXj81r8QqBPjGKfT7HskLk8JbRvD9g1lQFCxnlfbMKBaRcT1KdZ9TvS+bZ4JJNfCuhrHaeB9xkZHm/FmnpU2NkDF7znsa7ZcemxvP/Ogcc5ezLmuVczV2M8KvJjouBb6uqmchiwtchaJiBwnYz+N87nILcbFrCR8gUBLlhU7ubq2clzffC2Yx/pdJoutr6GMLwUaY83rbuAUqIXIh7oCTY7237CAflvp/vTXcsa4iPVHRI1VlTXe9L/9iAjE+wfV+IiY76f8CWOcWvFFnzGj74P5bIGtpX/lZ3Fu9925FRhcEwKdhEAnIdBJCHQSAp2EQCch0EkIdBICnYRAJz/6U1/LNooiXgAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Log In'" sap:VirtualizedContainerService.HintSize="382,188" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6251413e-404b-47b5-afa6-31a622223cb0" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="99, 193, 75, 25" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Log In'" FullSelectorArgument="&lt;ctrl name='Log In' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Log In' role='push button' automationid='' check:text='Log In' /&gt;" Guid="ac827913-2919-42ac-92f8-df64e56b4739" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE8AAAAdCAYAAADrcjF6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFjSURBVGhD7ZfJrYMwEEBdBhJNcKOG9MCFDmiBC31w4Pz1C+DAGYkOqGUi4yxeY4cBDNGM9BTJNkPmxVsYUKwOpjdQhMdLXlVVRCBWefM8Ex5IHgKSh4DkISB5CEgeApKHYB95YwtFkkLZTWbfzoxtAUlaQjeZfVtD8hCQPATR5C1FMgbsSd7AoI/ra8ikMXnTQp3xz8HIp+SV5S05cmj++XeSc7lzhBJFXl9nwHhBw7NthLZIgBlFyzkeYzyF2+UxJbf44eT3r+N4ea4+pV2ISssOJuX5fuXM09/nzxPC8fJ4MdY9SQgTBfHibM/7i7bL02eZP08IJM+SI5Tj5bn6lHZRnLFslzGfi/5teZ8ODOnEFZv6VgfG5eRJ1xDLdUQIfPcZs8y4znCRf96iry9vN7YpeiuuJc86i+JxWnl8+d3kGfbYCmzLOxanlaf/NXPtizE5r7wL4JRHhGHIo/g+SB4i7qb/owwhb4bYAAAAAElFTkSuQmCC" InformativeScreenshot="3890cdc6cf943e3e63c0122bb064f05b.png" ScopeSelectorArgument="&lt;wnd app='uidemo.exe' cls='HwndWrapper*' title='UiDemo' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="114, 195, 45, 21" ElementType="Text" FriendlyName="'Log In'" FullSelectorArgument="&lt;ctrl name='Log In' role='push button' /&gt;&lt;ctrl name='Log In' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Log In' role='push button' /&gt;&lt;ctrl name='Log In' role='text' automationid='' check:text='Log In' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADEAAAAZCAYAAACYY8ZHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE2SURBVFhH7ZixDYMwEEVvDCSWoGOG7EDDBqxAwx4U1FEGoKBGYgNmucgYlLPvSAg6CCgUX5Hs8/9+F9uKAlmW4dkFfd/j2XVBHEUXxFF0QRxFLkRbYhKEmFYdK9xabZlgEKZYdXzuky4ITe0KMYQBIEyKC2z8ujrHiNTERYl5ZD4b5uf4UojBI8biYfZEvbjHVxB1HiEY42Yaa7FMAgQWTj3GmpkNTJIhwPG2DaT5Vssh5uaccbvhMK2wc9bXK78JP0/2WQ5hTMUzazdujU2ItF4Op5Ih/K7LPn8GMTfnjNsQdpyGGh5OtQ/Eu4tNXih7+bQu9moI8nwKz6gFec2xrrNn2ADdxXC2RgViM8nhWtoHQuyqntQhzLG40Y6PR1Q6dlpSh/B/cszdG03pQ/xA4P+Hc0Y9ATLYiv0xRLwEAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" FilePath="[in_Config(&quot;UiDemoPath&quot;).ToString]" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJGSURBVFhH7ZfbThNRGIV71fPBtryCXBpfS9R6aO0BFKsIKh5auGjilUmfQ5BCQcqpthS1gpj4GL1Z5t8zezr8PzudC01JYCdfOpmL9a2156o+39W59KdUyFZKhRzGQ7biky//Pc1m89xfQhUYDAZj4eIVqNfrqNVqCnrW729+/IOJ5d+YWD5FeukU6eovpKsnSFeIY6TeHyP17idSb4k+km/6uPHhZGSuKGAivUTCoVQJHWnfkSYXvyP5egjP4XgvcO7KH0guErbw1TdcI14eKRILPZHDEQVMV6WXWisN0oUjJOYPLV4Q3ZG5ooCJ4dVqoZb2XMJDJOa6SMx1EH/eQfzZV5HD8VxguLJnMd9zCbtKmFDSDuLlNmJPiQORwxEFTFfFrzbuWqlwpG3EZg8Qe7KvGJUrCphwLxVSEs7uK6KP92x2EZ3ZFTkczwUcYbmNuCPVS/eUTBOZ3kGktINIsSVyOKKA6arcS6MkpJVaqoQti2ILkcI2wvkvCi7kiAImaKm+1ui0XmkLldQShvNbCD/aQji3qeA5HM8FaOWZpbRSS0loE8o2EXpIbCh4DkcUMH2CSNESOku1NLeJUJawpQ82ELy/bnGvIYQcUcCElobsq3WESqqFljSYWUPgLvFZ5HC8FyCxLQ3SSkfaQCCzhmCmoYSKO6sI3F5FYGpF5HBEAdMnUFfLpEqshFq6Av8U8Qn+WxZcyBEFTEyWt62VmbMr/Uo6FLq5PtMUORzPBf4XF6NAMZ+t0sM4KOZzVf434epcvvMXRK9ReqByx4IAAAAASUVORK5CYII=" sap2010:WorkflowViewState.IdRef="TargetApp_1" InformativeScreenshot="52d927cb61eb1ff545e6ddd94c9fe8ec.png" Selector="&lt;wnd app='uidemo.exe' cls='HwndWrapper*' title='UiDemo' /&gt;" Title="UiDemo" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
